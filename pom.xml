@@ -76,7 +76,7 @@
 			<layout>default</layout>
 		</repository>
 		<repository>
-			<id>mulesoft-releases</id>
+			<id>mulesoft-releases-nexus</id>
 			<name>MuleSoft Releases Repository</name>
 			<url>https://repository.mulesoft.org/nexus/content/repositories/releases/</url>
 			<layout>default</layout>
