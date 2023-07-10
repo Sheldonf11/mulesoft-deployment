@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            	git 'https://github.com/Sheldonf11/mulesoft-deployment.git'
+                git branch: "main", url: 'https://github.com/Sheldonf11/mulesoft-deployment.git'
+            	//git 'https://github.com/Sheldonf11/mulesoft-deployment.git'
                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
