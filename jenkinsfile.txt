@@ -10,13 +10,15 @@ pipeline {
         }
         stage('Test') {
             steps {
-            	git 'https://github.com/Sheldonf11/mulesoft-deployment.git'
+                git branch: "main", url: 'https://github.com/Sheldonf11/mulesoft-deployment.git'
+            	//git 'https://github.com/Sheldonf11/mulesoft-deployment.git'
                 bat "mvn -Dmaven.test.failure.ignore=true clean test"
             }
         }
         stage('Deploy') {
             steps {
-            	git 'https://github.com/Sheldonf11/mulesoft-deployment.git'
+            	git branch: "main", url: 'https://github.com/Sheldonf11/mulesoft-deployment.git'
+            	//git 'https://github.com/Sheldonf11/mulesoft-deployment.git'
             	bat "mvn -Dmaven.test.failure.ignore=true clean deploy -DmuleDeploy"
                 //bat "mvn clean package deploy -DmuleDeploy"
             }
